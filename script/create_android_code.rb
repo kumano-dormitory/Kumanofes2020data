@@ -33,9 +33,9 @@ File.open("./for_android.txt", "w+") do |f|
         tmp_str = ""
       end
       if tmp_str == "" then
-        tmp_str = "listOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"#{data['start_day'][0..1]}/#{data['start_day'][2..3]} #{data['start_at']}\",\"#{data['end_day'][0..1]}/#{data['end_day'][2..3]} #{data['end_at']}\",\"#{data['place']}\",\"#{data['path']}\")"
+        tmp_str = "listOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"#{data['start_day'][0..1]}/#{data['start_day'][2..3]} #{data['start_at']}\",\"#{data['end_day'][0..1]}/#{data['end_day'][2..3]} #{data['end_at']}\",\"#{data['place']}\",\"#{data['path']}\",\"#{data['order']}\")"
       else
-        tmp_str = "#{tmp_str},\nlistOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"#{data['start_day'][0..1]}/#{data['start_day'][2..3]} #{data['start_at']}\",\"#{data['end_day'][0..1]}/#{data['end_day'][2..3]} #{data['end_at']}\",\"#{data['place']}\",\"#{data['path']}\")"
+        tmp_str = "#{tmp_str},\nlistOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"#{data['start_day'][0..1]}/#{data['start_day'][2..3]} #{data['start_at']}\",\"#{data['end_day'][0..1]}/#{data['end_day'][2..3]} #{data['end_at']}\",\"#{data['place']}\",\"#{data['path']}\",\"#{data['order']}\")"
       end
       tmp_str_write_f = true
       url_hash["#{data['path']}"] = "https://kumano-dormitory.github.io/ryosai2020/events/#{data['id']}.html"
@@ -46,17 +46,17 @@ File.open("./for_android.txt", "w+") do |f|
           f.write(tmp_str)
       end
       if tmp_permanent == ""
-        tmp_permanent = "listOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\")"
+        tmp_permanent = "listOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\",\"#{data['order']}\")"
       else
-        tmp_permanent = "#{tmp_permanent},\nlistOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\")"
+        tmp_permanent = "#{tmp_permanent},\nlistOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\",\"#{data['order']}\")"
       end
       url_hash["#{data['path']}"] = "https://kumano-dormitory.github.io/ryosai2020/events/#{data['id']}.html"
       i = i + 1
     elsif (data['type'] == "2") then
       if tmp_gerira == ""
-        tmp_gerira = "listOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\")"
+        tmp_gerira = "listOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\",\"#{data['order']}\")"
       else
-        tmp_gerira = "#{tmp_gerira},\nlistOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\")"
+        tmp_gerira = "#{tmp_gerira},\nlistOf(\"#{data['id']}\",\"#{data['type']}\",\"#{data['title']}\",\"#{data['details']}\",\"\",\"\",\"#{data['place']}\",\"#{data['path']}\",\"#{data['order']}\")"
       end
       url_hash["#{data['path']}"] = "https://kumano-dormitory.github.io/ryosai2020/events/#{data['id']}.html"
       i = i + 1
