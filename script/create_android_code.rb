@@ -67,7 +67,7 @@ File.open("./for_android.txt", "w+") do |f|
       path_hash[data['path']] = "    \"#{data['path']}\" -> R.drawable.#{data['path']}\n"
     end
     # viewIdの集合に追加する
-    id_hash[data['id']] = "       R.id.ev#{data['id']} -> #{data['id']}\n"
+    id_hash[data['id']] = "       R.id.#{data['id']} -> \"#{data['id']}\"\n"
   end
   f.write("\n),\nlistOf(\n")
   f.write(tmp_permanent)
